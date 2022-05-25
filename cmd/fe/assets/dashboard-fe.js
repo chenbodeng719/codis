@@ -1250,7 +1250,8 @@ dashboard.controller('MainCodisCtrl', ['$scope', '$http', '$uibModal', '$timeout
                     for (var i = 0; i < $scope.group_array.length; i ++) {
                         var g = $scope.group_array[i];
                         var slots = [], beg = 0, end = -1;
-                        for (var sid = 0; sid < 1024; sid ++) {
+                        // for (var sid = 0; sid < 1024; sid ++) {
+                        for (var sid = 0; sid < 128; sid ++) {
                             if (resp.data[sid] == g.id) {
                                 if (beg > end) {
                                     beg = sid; end = sid;
